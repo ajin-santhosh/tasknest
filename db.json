@@ -1,0 +1,50 @@
+{
+    "users": [
+    { "id": 1, "username": "ajin", "password": "1234" }
+  ],
+
+  "tasks":[
+    {
+        "id":1, 
+        "taskname":"My First Task",
+        "discription": "adaddss",
+         "status": "todo", 
+         "priority":"low", 
+         "createddate":"2025-09-05T14:30:00Z", 
+         "enddate":"2025-10-05T14:30:00Z",
+         "owner": "Admin"
+        
+    },
+    {
+        "id":2, 
+        "taskname":"My Second Task",
+        "discription": "adaddss ijiajddeubfe hbhbfewfjrfiuerhvnhurrtrhrbbruhrvuthrnhtr turhtr ue truhtrhtrhtrytrvtrtvgrybgyr grygyryurre gyrryeg",
+         "status": "inprogress", 
+         "priority":"low", 
+         "createddate":"2025-09-05T14:30:00Z", 
+         "enddate":"2025-10-05T14:30:00Z",
+         "owner": "Admin"
+        
+    },{
+        "id":3, 
+        "taskname":"My Third Task",
+        "discription": "adaddss",
+         "status": "blocked", 
+         "priority":"High", 
+         "createddate":"2025-09-05T14:30:00Z", 
+         "enddate":"2025-10-05T14:30:00Z",
+         "owner": "Admin"
+        
+    },{
+        "id":4, 
+        "taskname":"My fourth Task",
+        "discription": "adaddss",
+         "status": "completed", 
+         "priority":"low", 
+         "createddate":"2025-09-05T14:30:00Z", 
+         "enddate":"2025-10-05T14:30:00Z",
+         "owner": "Admin"
+        
+    }
+  ]
+}
