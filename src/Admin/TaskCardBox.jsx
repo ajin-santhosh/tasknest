@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import pen from "../assets/pen.svg";
 import { Link } from 'react-router-dom'
+import { useParams } from "react-router-dom";
 
 function TaskCardBox() {
+  let {id} = useParams()
   const statusColors = {
   todo: "text-gray-400",
   inprogress : "text-yellow-700",
@@ -15,10 +17,10 @@ function TaskCardBox() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/tasks/1")
+      .get(`http://localhost:5000/tasks/${id}`)
       .then((res) => setTask(res.data))
       .catch((err) => console.error("Error fetching task:", err));
-  }, []);
+  }, [id]);
 
   return (
     <>

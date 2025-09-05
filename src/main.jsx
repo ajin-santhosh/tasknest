@@ -35,7 +35,7 @@ const router = createBrowserRouter([
     element :<AdminHeaderPage />,
     children: [
       {index: true, element : <AdminHome />},
-      {path:"task", element : <TaskCardBox />},
+      {path:"task/:id", element : <TaskCardBox />},
     ],
   }
   
