@@ -15,6 +15,14 @@ import Homepage from './Home/Homepage.jsx';
 import AdminHeaderPage from './Admin/AdminHeaderPage.jsx';
 import AdminHome from './Admin/AdminHome.jsx';
 import TaskCardBox from './Admin/TaskCardBox.jsx';
+import TaskCardUpdate from './Admin/task/TaskCardUpdate.jsx';
+import AddTask from './Admin/task/AddTask.jsx';
+import AdminVerifyUsers from './Admin/AdminVerifyUsers.jsx';
+import AdminViewUsers from './Admin/AdminViewUsers.jsx';
+import UserHeaderPage from './Users/UserHeaderPage.jsx';
+import UserHomePage from './Users/UserHomePage.jsx';
+import UserNotVerifiedPage from './Users/UserNotVerifiedPage.jsx';
+import UsertaskCardBox from './Users/UserCards/UsertaskCardBox.jsx';
 
 const router = createBrowserRouter([
   // Home page routing
@@ -36,8 +44,27 @@ const router = createBrowserRouter([
     children: [
       {index: true, element : <AdminHome />},
       {path:"task/:id", element : <TaskCardBox />},
+      {path:"task/:id/taskupdate", element : <TaskCardUpdate/>},
+      {path:"addtask", element : <AddTask />},
+      {path:"verify_users", element : <AdminVerifyUsers />},
+      {path:"view_users", element : <AdminViewUsers />},
+
     ],
-  }
+  },
+  {
+    path:"/user/:userid",
+    element: <UserHeaderPage />,
+    children:[
+    {index: true, element : <UserHomePage />},
+    {path:"usertask/:id", element : <UsertaskCardBox />},
+
+    ],  
+
+  },
+  {
+    path: "/user_not_verfied",element: <UserNotVerifiedPage />
+  },
+
   
 ]);
 

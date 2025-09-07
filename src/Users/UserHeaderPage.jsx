@@ -1,19 +1,18 @@
-import React from "react";
-import { Outlet, Link } from "react-router-dom";
-import logo from "../assets/logo.png";
-import img1 from "../assets/user (1).svg";
-import bell from "../assets/bell.svg";
-import plus from "../assets/plus-square.svg";
-import img2 from "../assets/users.svg"
+import React from 'react'
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
+import bell from "../assets/bell.svg";
+import { Outlet, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
+function UserHeaderPage() {
+    let {userid} = useParams()
 
-function AdminHeaderPage() {
-  const navigate = useNavigate();
-
-  function handleLogout() {
-    navigate("/login");             
-  }
+    const navigate = useNavigate();
+    
+      function handleLogout() {
+        navigate("/login");             
+      }
   return (
     <>
       <div className="bg-black text-white">
@@ -27,12 +26,6 @@ function AdminHeaderPage() {
 
     {/* Right Side Buttons */}
     <div className="flex flex-wrap justify-center md:justify-end gap-2 items-center">
-      <Link to={`verify_users`}>
-        <div className="flex items-center border-1 border-white-500 rounded-md w-auto md:w-33 m-2 hover:bg-gray-500 p-1 gap-2">
-          <p className="text-sm sm:text-base">Verify Users</p>
-          <img src={img2} alt="user" className="w-6 h-8" />
-        </div>
-      </Link>
 
       {/* <button className="px-3 sm:px-4 py-2 rounded-xl bg-[#00ADB5] text-black font-semibold text-sm sm:text-base">
         Dark/Light
@@ -78,7 +71,7 @@ function AdminHeaderPage() {
   </div>
 </footer>
 </>
-  );
+  )
 }
 
-export default AdminHeaderPage;
+export default UserHeaderPage

@@ -1,50 +1,197 @@
 {
-    "users": [
-    { "id": 1, "username": "ajin", "password": "1234" }
-  ],
-
-  "tasks":[
+  "users": [
     {
-        "id":1, 
-        "taskname":"My First Task",
-        "discription": "adaddss",
-         "status": "todo", 
-         "priority":"low", 
-         "createddate":"2025-09-05T14:30:00Z", 
-         "enddate":"2025-10-05T14:30:00Z",
-         "owner": "Admin"
-        
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "username": "admin",
+      "password": "admin@123",
+      "usertype": "admin",
+      "status": "1"
     },
     {
-        "id":2, 
-        "taskname":"My Second Task",
-        "discription": "adaddss ijiajddeubfe hbhbfewfjrfiuerhvnhurrtrhrbbruhrvuthrnhtr turhtr ue truhtrhtrhtrytrvtrtvgrybgyr grygyryurre gyrryeg",
-         "status": "inprogress", 
-         "priority":"low", 
-         "createddate":"2025-09-05T14:30:00Z", 
-         "enddate":"2025-10-05T14:30:00Z",
-         "owner": "Admin"
-        
-    },{
-        "id":3, 
-        "taskname":"My Third Task",
-        "discription": "adaddss",
-         "status": "blocked", 
-         "priority":"High", 
-         "createddate":"2025-09-05T14:30:00Z", 
-         "enddate":"2025-10-05T14:30:00Z",
-         "owner": "Admin"
-        
-    },{
-        "id":4, 
-        "taskname":"My fourth Task",
-        "discription": "adaddss",
-         "status": "completed", 
-         "priority":"low", 
-         "createddate":"2025-09-05T14:30:00Z", 
-         "enddate":"2025-10-05T14:30:00Z",
-         "owner": "Admin"
-        
+      "id": "9598",
+      "name": "manu",
+      "email": "manu@email.com",
+      "username": "manu",
+      "password": "manu@123",
+      "usertype": "user",
+      "status": 1
+    },
+    {
+      "id": "d6a3",
+      "name": "cc",
+      "email": "boy@gmail.com",
+      "username": "cc",
+      "password": "cc",
+      "usertype": "",
+      "status": 1
+    },
+    {
+      "id": "e07e",
+      "name": "dd",
+      "email": "boy@gmail.com",
+      "username": "dd",
+      "password": "dd",
+      "usertype": "user",
+      "status": 1
+    },
+    {
+      "id": "e101",
+      "name": "ee",
+      "email": "ee@gmail.com",
+      "username": "ee",
+      "password": "ee",
+      "usertype": "",
+      "status": "0"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "taskname": "My First Task",
+      "discription": "chggfhthytrytrytrytry",
+      "status": "todo",
+      "priority": "high",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-11-17T18:30:00.000Z",
+      "owner": "Admin",
+      "endDate": null,
+      "assignee": "",
+      "description": "ct"
+    },
+    {
+      "id": "2",
+      "taskname": "My Second Task",
+      "discription": "adaddss ijiajddeubfe hbhbfewfjrfiuerhvnhurrtrhrbbruhrvuthrnhtr turhtr ue truhtrhtrhtrytrvtrtvgrybgyr grygyryurre gyrryeg",
+      "status": "completed",
+      "priority": "low",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-10-05T14:30:00Z",
+      "owner": "Admin",
+      "endDate": "2025-09-17T18:30:00.000Z",
+      "assignee": "",
+      "description": "vvv"
+    },
+    {
+      "id": "3",
+      "taskname": "My Third Task",
+      "discription": "adaddss",
+      "status": "blocked",
+      "priority": "High",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-10-05T14:30:00Z",
+      "owner": "Admin"
+    },
+    {
+      "id": "4",
+      "taskname": "My fourth Task",
+      "discription": "adaddss",
+      "status": "inprogress",
+      "priority": "medium",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-10-15T14:30:00.000Z",
+      "owner": "Admin"
+    },
+    {
+      "id": "519c",
+      "taskname": "",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:09:06.524Z",
+      "owner": "Admin",
+      "discription": ""
+    },
+    {
+      "id": "77d9",
+      "taskname": "",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:09:06.528Z",
+      "owner": "Admin",
+      "discription": ""
+    },
+    {
+      "id": "4920",
+      "taskname": "",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:10:01.097Z",
+      "owner": "Admin",
+      "discription": ""
+    },
+    {
+      "id": "59ee",
+      "taskname": "",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:10:01.097Z",
+      "owner": "Admin",
+      "discription": ""
+    },
+    {
+      "id": "35e5",
+      "taskname": "x",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:10:01.097Z",
+      "owner": "Admin",
+      "discription": ""
+    },
+    {
+      "id": "45c7",
+      "taskname": "x",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:10:01.097Z",
+      "owner": "Admin",
+      "discription": ""
+    },
+    {
+      "id": "a503",
+      "taskname": "xx",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:10:01.097Z",
+      "owner": "Admin",
+      "discription": ""
+    },
+    {
+      "id": "0466",
+      "taskname": "xx",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:10:01.097Z",
+      "owner": "Admin",
+      "discription": ""
+    },
+    {
+      "id": "196d",
+      "taskname": "xxx",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:10:01.097Z",
+      "owner": "Admin",
+      "discription": ""
+    },
+    {
+      "id": "132b",
+      "taskname": "xxx",
+      "status": "",
+      "priority": "",
+      "createddate": "2025-09-05T14:30:00Z",
+      "enddate": "2025-09-05T17:10:01.097Z",
+      "owner": "Admin",
+      "discription": ""
     }
   ]
 }

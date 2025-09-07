@@ -1,11 +1,14 @@
 import React, { use } from 'react'
 import { useEffect, useState } from "react"
 import axios from "axios"
-import TaskCard from './TaskCard'
+import UserTaskCard from './UserCards/UserTaskCard'
 import { Link } from 'react-router-dom'
 import plus from "../assets/plus-square.svg";
-function AdminHome() {
-const [filters, setFilters] = useState("");
+import { useParams } from "react-router-dom";
+
+
+function UserHomePage() { 
+    const [filters, setFilters] = useState("");
 const [tasks, setTasks] = useState([])
 const [search, setsearch] = useState("")
 
@@ -18,8 +21,6 @@ const [search, setsearch] = useState("")
         console.error("Error fetching tasks:", err);
       });
   }, []);
-
-       
   return (
    <>
    <section>
@@ -100,7 +101,7 @@ const [search, setsearch] = useState("")
               task.taskname.toLowerCase().includes(search.toLowerCase()))
         )
         .map((task) => (
-          <TaskCard key={task.id} task={task} />
+          <UserTaskCard key={task.id} task={task} />
         ))}
     </div>
 
@@ -115,7 +116,7 @@ const [search, setsearch] = useState("")
               task.taskname.toLowerCase().includes(search.toLowerCase()))
         )
         .map((task) => (
-          <TaskCard key={task.id} task={task} />
+          <UserTaskCard key={task.id} task={task} />
         ))}
     </div>
 
@@ -130,7 +131,7 @@ const [search, setsearch] = useState("")
               task.taskname.toLowerCase().includes(search.toLowerCase()))
         )
         .map((task) => (
-          <TaskCard key={task.id} task={task} />
+          <UserTaskCard key={task.id} task={task} />
         ))}
     </div>
 
@@ -145,7 +146,7 @@ const [search, setsearch] = useState("")
               task.taskname.toLowerCase().includes(search.toLowerCase()))
         )
         .map((task) => (
-          <TaskCard key={task.id} task={task} />
+          <UserTaskCard key={task.id} task={task} />
         ))}
     </div>
   </div>
@@ -155,4 +156,4 @@ const [search, setsearch] = useState("")
   )
 }
 
-export default AdminHome
+export default UserHomePage

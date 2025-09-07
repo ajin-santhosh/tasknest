@@ -4,8 +4,11 @@ import axios from "axios";
 import pen from "../assets/pen.svg";
 import { Link } from 'react-router-dom'
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function TaskCardBox() {
+ const navigate = useNavigate()
   let {id} = useParams()
   const statusColors = {
   todo: "text-gray-400",
@@ -21,11 +24,22 @@ function TaskCardBox() {
       .then((res) => setTask(res.data))
       .catch((err) => console.error("Error fetching task:", err));
   }, [id]);
+  function deleteTask (){
+    axios.delete(`http://localhost:5000/tasks/${id}`)
+    .then(() => {
+      console.log("Task deleted!");
+      alert("Task deleted successfully!");
 
+      navigate("/admin"); 
+    })
+    .catch(err => {
+      console.error("Error deleting task:", err);
+    });
+  }
   return (
     <>
       {task && (
-        <div className="bg-white dark:bg-slate-900 rounded-xl px-6 py-8 ring-1 ring-slate-900/5 shadow-xl min-h-screen">
+        <div className="bg-white dark:bg-slate-900 rounded-xl px-6 py-8 ring-1 ring-slate-900/5 shadow-xl min-h-screen m-2">
           <button>
                       <img src={pen} alt="pen" />
                       </button>
@@ -66,11 +80,22 @@ function TaskCardBox() {
             {" "}
             Created by:
           </p>
-          <Link to={"/admin"}>
+          <div className="p-2 flex gap-9">
+            <Link to={"/admin"}>
            <button class=" my-2 px-4 py-2 bg-[#00ADB5] text-white rounded-lg hover:bg-blue-400">
               Back
             </button>
           </Link>
+          <button class=" my-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-800" onClick={deleteTask}>
+              Delete
+            </button>
+          <Link to={`taskupdate`}>
+          <button class=" my-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-400">
+              Update
+            </button>
+          </Link>
+          
+          </div>
         </div>
       )}
     </>
