@@ -23,6 +23,8 @@ import UserHeaderPage from './Users/UserHeaderPage.jsx';
 import UserHomePage from './Users/UserHomePage.jsx';
 import UserNotVerifiedPage from './Users/UserNotVerifiedPage.jsx';
 import UsertaskCardBox from './Users/UserCards/UsertaskCardBox.jsx';
+import UserAddTask from './Users/UserCards/UserAddTask.jsx';
+import UserUpdateTask from './Users/UserCards/UserUpdateTask.jsx';
 
 const router = createBrowserRouter([
   // Home page routing
@@ -52,11 +54,14 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path:"/user/:userid",
+    path:"/user/:userid/:name",
     element: <UserHeaderPage />,
     children:[
     {index: true, element : <UserHomePage />},
     {path:"usertask/:id", element : <UsertaskCardBox />},
+    {path:"user_addtask", element : <UserAddTask />},
+    {path:"usertask/:id/user_update_task", element : <UserUpdateTask/>},
+
 
     ],  
 

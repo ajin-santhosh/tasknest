@@ -8,10 +8,11 @@ import { useParams } from "react-router-dom";
 
 
 function UserHomePage() { 
-    const [filters, setFilters] = useState("");
+  let {name} = useParams()
+const [filters, setFilters] = useState("");
 const [tasks, setTasks] = useState([])
 const [search, setsearch] = useState("")
-
+  const [isOn, setIsOn] = useState(false);
     useEffect(()=>{
         axios.get("http://localhost:5000/tasks")
       .then((res) => {
@@ -21,6 +22,7 @@ const [search, setsearch] = useState("")
         console.error("Error fetching tasks:", err);
       });
   }, []);
+  
   return (
    <>
    <section>
@@ -57,11 +59,25 @@ const [search, setsearch] = useState("")
           High
         </option>
       </select>
+      <button
+      type="button"
+      onClick={() => setIsOn(!isOn)}
+      className={`m-2 flex items-center gap-2 p-2 h-11 rounded-lg transition-colors ${
+        isOn ? "bg-gray-500 text-white" : "bg-gray-800 text-white"
+      }`}
+    >
+      <div
+        className={`w-5 h-5 rounded-full bg-white transition-transform ${
+          isOn ? "translate-x-1" : ""
+        }`}
+      ></div>
+      <span className="text-sm font-medium">{isOn ? "My Board" : "Team Board"}</span>
+    </button>
     </div>
 
     {/* Add Task button */}
     <div className="flex justify-center sm:justify-end">
-      <Link to={"addtask"}>
+      <Link to={"user_addtask"}>
         <div className="flex items-center border-1 border-white-500 rounded-md w-auto m-2 hover:bg-gray-500 p-1 gap-2">
           <button className="p-2">Add Task</button>
           <img src={plus} alt="user" className="w-6 h-6" />
@@ -92,7 +108,32 @@ const [search, setsearch] = useState("")
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 m-3 justify-center">
     {/* To-Do */}
     <div className="bg-gray-800 m-2 rounded-md justify-center">
-      {tasks
+      {isOn ? (
+        tasks
+        .filter(
+          (task) =>
+            task.status === "todo" &&
+            (task.assignee === name ||
+            task.owner === name) &&
+            (filters === "" || task.priority === filters) &&
+            (search === "" ||  task.taskname.toLowerCase().includes(search.toLowerCase()))
+        )
+        .map((task) => (
+          <UserTaskCard key={task.id} task={task} />
+        ))
+      ) : (
+        tasks
+        .filter(
+          (task) =>
+            task.status === "todo" &&
+            (filters === "" || task.priority === filters) &&
+            (search === "" ||  task.taskname.toLowerCase().includes(search.toLowerCase()))
+        )
+        .map((task) => (
+          <UserTaskCard key={task.id} task={task} />
+        ))
+      )}
+      {/* {tasks
         .filter(
           (task) =>
             task.status === "todo" &&
@@ -102,52 +143,94 @@ const [search, setsearch] = useState("")
         )
         .map((task) => (
           <UserTaskCard key={task.id} task={task} />
-        ))}
+        ))} */}
     </div>
 
     {/* In-Progress */}
     <div className="bg-gray-800 m-2 rounded-md justify-center">
-      {tasks
+      {isOn ? (
+        tasks
+        .filter(
+          (task) =>
+            task.status === "inprogress" &&
+            (task.assignee === name ||
+            task.owner === name) &&
+            (filters === "" || task.priority === filters) &&
+            (search === "" ||  task.taskname.toLowerCase().includes(search.toLowerCase()))
+        )
+        .map((task) => (
+          <UserTaskCard key={task.id} task={task} />
+        ))
+      ) : (
+        tasks
         .filter(
           (task) =>
             task.status === "inprogress" &&
             (filters === "" || task.priority === filters) &&
-            (search === "" ||
-              task.taskname.toLowerCase().includes(search.toLowerCase()))
+            (search === "" ||  task.taskname.toLowerCase().includes(search.toLowerCase()))
         )
         .map((task) => (
           <UserTaskCard key={task.id} task={task} />
-        ))}
+        ))
+      )}
     </div>
 
     {/* Blocked */}
     <div className="bg-gray-800 m-2 rounded-md justify-center">
-      {tasks
+      {isOn ? (
+        tasks
+        .filter(
+          (task) =>
+            task.status === "blocked" &&
+            (task.assignee === name ||
+            task.owner === name) &&
+            (filters === "" || task.priority === filters) &&
+            (search === "" ||  task.taskname.toLowerCase().includes(search.toLowerCase()))
+        )
+        .map((task) => (
+          <UserTaskCard key={task.id} task={task} />
+        ))
+      ) : (
+        tasks
         .filter(
           (task) =>
             task.status === "blocked" &&
             (filters === "" || task.priority === filters) &&
-            (search === "" ||
-              task.taskname.toLowerCase().includes(search.toLowerCase()))
+            (search === "" ||  task.taskname.toLowerCase().includes(search.toLowerCase()))
         )
         .map((task) => (
           <UserTaskCard key={task.id} task={task} />
-        ))}
+        ))
+      )}
     </div>
 
     {/* Completed */}
     <div className="bg-gray-800 m-2 rounded-md justify-center">
-      {tasks
+      {isOn ? (
+        tasks
+        .filter(
+          (task) =>
+            task.status === "completed" &&
+            (task.assignee === name ||
+            task.owner === name) &&
+            (filters === "" || task.priority === filters) &&
+            (search === "" ||  task.taskname.toLowerCase().includes(search.toLowerCase()))
+        )
+        .map((task) => (
+          <UserTaskCard key={task.id} task={task} />
+        ))
+      ) : (
+        tasks
         .filter(
           (task) =>
             task.status === "completed" &&
             (filters === "" || task.priority === filters) &&
-            (search === "" ||
-              task.taskname.toLowerCase().includes(search.toLowerCase()))
+            (search === "" ||  task.taskname.toLowerCase().includes(search.toLowerCase()))
         )
         .map((task) => (
           <UserTaskCard key={task.id} task={task} />
-        ))}
+        ))
+      )}
     </div>
   </div>
 </section>

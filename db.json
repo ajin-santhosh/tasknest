@@ -19,31 +19,22 @@
       "status": 1
     },
     {
-      "id": "d6a3",
+      "id": "8f7e",
       "name": "cc",
-      "email": "boy@gmail.com",
+      "email": "cc@gmail.com",
       "username": "cc",
       "password": "cc",
-      "usertype": "",
-      "status": 1
-    },
-    {
-      "id": "e07e",
-      "name": "dd",
-      "email": "boy@gmail.com",
-      "username": "dd",
-      "password": "dd",
       "usertype": "user",
       "status": 1
     },
     {
-      "id": "e101",
-      "name": "ee",
-      "email": "ee@gmail.com",
-      "username": "ee",
-      "password": "ee",
-      "usertype": "",
-      "status": "0"
+      "id": "f3f5",
+      "name": "ff",
+      "email": "cc@gmail.com",
+      "username": "ff",
+      "password": "ff",
+      "usertype": "user",
+      "status": 1
     }
   ],
   "tasks": [
@@ -57,7 +48,7 @@
       "enddate": "2025-11-17T18:30:00.000Z",
       "owner": "Admin",
       "endDate": null,
-      "assignee": "",
+      "assignee": "manu",
       "description": "ct"
     },
     {
@@ -192,6 +183,39 @@
       "enddate": "2025-09-05T17:10:01.097Z",
       "owner": "Admin",
       "discription": ""
+    },
+    {
+      "id": "899f",
+      "taskname": "My Fifth Task",
+      "status": "todo",
+      "priority": "low",
+      "createddate": "2025-09-08T14:58:34.206Z",
+      "enddate": "2025-10-02T14:58:34.000Z",
+      "owner": "Admin",
+      "discription": "sample task",
+      "assignee": ""
+    },
+    {
+      "id": "9d8a",
+      "taskname": "Manus task",
+      "status": "blocked",
+      "priority": "high",
+      "createddate": "2025-09-08T16:19:07.923Z",
+      "enddate": "2025-10-09T16:19:07.000Z",
+      "owner": "manu",
+      "discription": "manus 1st task",
+      "assignee": "manu"
+    },
+    {
+      "id": "7a48",
+      "taskname": "manus Second Task--2",
+      "status": "completed",
+      "priority": "low",
+      "createddate": "2025-09-08T16:22:38.411Z",
+      "enddate": "2025-09-11T16:22:38.000Z",
+      "owner": "manu",
+      "discription": "aaa vvvv",
+      "assignee": "manu"
     }
   ]
 }

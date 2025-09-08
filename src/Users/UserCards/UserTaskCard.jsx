@@ -11,7 +11,7 @@ function UserTaskCard({ task }) {
   return (
    <><Link to={`usertask/${task.id}`}>
    
-        <div className="bg-white dark:bg-slate-900 rounded-xl px-6 py-8 ring-1 ring-slate-900/5 shadow-xl m-2 min-h-[250px] hover:bg-slate-800 transition cursor-pointer">
+        <div className="bg-white dark:bg-slate-900 rounded-xl px-6 py-8 ring-1 ring-slate-900/5 shadow-xl m-2 min-h-[250px] hover:bg-slate-950 transition cursor-pointer">
      <div className="flex justify-between items-start">
        <h3 className="text-slate-900 dark:text-white text-lg font-sans tracking-tight">
          {task.taskname}
@@ -35,7 +35,7 @@ function UserTaskCard({ task }) {
        End Date: {task.enddate}
      </h5>
      <h5 className="text-slate-900 dark:text-white mt-1 text-base font-mono">
-       Assignee: {task.owner}
+       Assignee: {task.assignee}
      </h5>
    
      <p className="text-slate-500 dark:text-slate-400 mt-3 text-sm clamp-2 ">

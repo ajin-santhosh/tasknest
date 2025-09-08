@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 function UsertaskCardBox() {
   const navigate = useNavigate();
   let { id } = useParams();
-  let { userid } = useParams();
+  let { userid,name } = useParams();
 //   console.log(userid);
   const statusColors = {
     todo: "text-gray-400",
@@ -32,7 +32,9 @@ function UsertaskCardBox() {
       .then((res) => setUser(res.data))
       .catch((err) => console.error("Error fetching task:", err));
   }, [userid]);
-
+if (!user) {
+  return <p>Loading...</p>;   // or spinner
+}
    
   
   function deleteTask() {
@@ -41,8 +43,6 @@ function UsertaskCardBox() {
       .then(() => {
         console.log("Task deleted!");
         alert("Task deleted successfully!");
-
-        //   navigate("/admin");
       })
       .catch((err) => {
         console.error("Error deleting task:", err);
@@ -73,7 +73,7 @@ function UsertaskCardBox() {
             End Date: {task.enddate}
           </h5>
           <h5 className="text-slate-900 dark:text-white mt-1 text-base font-mono tracking-tight">
-            Assignee : {task.owner}{" "}
+            Assignee : {task.assignee}{" "}
           </h5>
           <p className="text-slate-500 dark:text-slate-400 mt-3 text-sm text-base px-2 py-1   rounded-lg bg-gray-800">
             <span className="font-semibold">Description:</span> <br />
@@ -96,22 +96,33 @@ function UsertaskCardBox() {
             Created by:{task.owner}
           </p>
           <div className="p-2 flex gap-9">
-            <Link to={`/user/${userid}`}>
+            <Link to={`/user/${userid}/${name}`}>
               <button class=" my-2 px-4 py-2 bg-[#00ADB5] text-white rounded-lg hover:bg-blue-400">
                 Back
               </button>
             </Link>
-            <button
+
+             { (user.name === task.owner || user.name === task.assignee) &&(
+
+                <button
               class=" my-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-800"
               onClick={deleteTask}
             >
               Delete
             </button>
-            <Link>
+              )
+
+              }
+              {(user.name ===task.assignee)&&(
+              <Link to={`user_update_task`}>
               <button class=" my-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-400">
                 Update
               </button>
             </Link>
+              )
+                
+              }
+            
           </div>
         </div>
       )}

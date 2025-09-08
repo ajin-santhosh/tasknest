@@ -27,7 +27,7 @@ function Login() {
         if (user.usertype === "admin") {
           navigate("/admin")
         } else if (user.usertype === "user") {
-          navigate(`/user/${user.id}`)
+          navigate(`/user/${user.id}/${user.name}`)
         }
         else if (user.usertype === "") {
           navigate("/user_not_verfied")

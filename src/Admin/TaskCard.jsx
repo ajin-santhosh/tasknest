@@ -14,7 +14,7 @@ function TaskCard({ task }) {
   return (
     <><Link to={`task/${task.id}`}>
 
-     <div className="bg-white dark:bg-slate-900 rounded-xl px-6 py-8 ring-1 ring-slate-900/5 shadow-xl m-2 min-h-[250px] hover:bg-slate-800 transition cursor-pointer">
+     <div className="bg-white dark:bg-slate-900 rounded-xl px-6 py-8 ring-1 ring-slate-900/5 shadow-xl m-2 min-h-[250px] hover:bg-slate-950 transition cursor-pointer">
   <div className="flex justify-between items-start">
     <h3 className="text-slate-900 dark:text-white text-lg font-sans tracking-tight">
       {task.taskname}
