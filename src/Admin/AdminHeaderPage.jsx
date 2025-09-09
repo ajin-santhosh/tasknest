@@ -50,13 +50,10 @@ function AdminHeaderPage() {
 
   <hr />
 </div>
-
-<section>
-  {/* admin panel grid */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+<section className="bg-gray-950">
+  <Outlet />
 </section>
 
-<Outlet />
 
 {/* Footer */}
 <footer className="border-t border-gray-800">

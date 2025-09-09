@@ -21,14 +21,14 @@ function UsertaskCardBox() {
    const [user, setUser] = useState(null)
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/tasks/${id}`)
+      .get(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/tasks/${id}`)
       .then((res) => setTask(res.data))
       .catch((err) => console.error("Error fetching task:", err));
   }, [id])
 
    useEffect(() => {
     axios
-      .get(`http://localhost:5000/users/${userid}`)
+      .get(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/users/${userid}`)
       .then((res) => setUser(res.data))
       .catch((err) => console.error("Error fetching task:", err));
   }, [userid]);
@@ -39,7 +39,7 @@ if (!user) {
   
   function deleteTask() {
     axios
-      .delete(`http://localhost:5000/tasks/${id}`)
+      .delete(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/tasks/${id}`)
       .then(() => {
         console.log("Task deleted!");
         alert("Task deleted successfully!");

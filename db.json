@@ -19,22 +19,22 @@
       "status": 1
     },
     {
-      "id": "8f7e",
-      "name": "cc",
-      "email": "cc@gmail.com",
-      "username": "cc",
-      "password": "cc",
+      "id": "1619",
+      "name": "ajin",
+      "email": "ajinsanthosh555@gmail.com",
+      "username": "ajin",
+      "password": "ajin@123",
       "usertype": "user",
       "status": 1
     },
     {
-      "id": "f3f5",
-      "name": "ff",
+      "id": "2ed5",
+      "name": "gg",
       "email": "cc@gmail.com",
-      "username": "ff",
-      "password": "ff",
-      "usertype": "user",
-      "status": 1
+      "username": "gg",
+      "password": "gg",
+      "usertype": "",
+      "status": "0"
     }
   ],
   "tasks": [
@@ -47,7 +47,6 @@
       "createddate": "2025-09-05T14:30:00Z",
       "enddate": "2025-11-17T18:30:00.000Z",
       "owner": "Admin",
-      "endDate": null,
       "assignee": "manu",
       "description": "ct"
     },
@@ -60,8 +59,7 @@
       "createddate": "2025-09-05T14:30:00Z",
       "enddate": "2025-10-05T14:30:00Z",
       "owner": "Admin",
-      "endDate": "2025-09-17T18:30:00.000Z",
-      "assignee": "",
+      "assignee": "ajin",
       "description": "vvv"
     },
     {
@@ -72,6 +70,7 @@
       "priority": "High",
       "createddate": "2025-09-05T14:30:00Z",
       "enddate": "2025-10-05T14:30:00Z",
+      "assignee": "ajin",
       "owner": "Admin"
     },
     {
@@ -82,108 +81,10 @@
       "priority": "medium",
       "createddate": "2025-09-05T14:30:00Z",
       "enddate": "2025-10-15T14:30:00.000Z",
+     "assignee": "ajin",
       "owner": "Admin"
     },
-    {
-      "id": "519c",
-      "taskname": "",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:09:06.524Z",
-      "owner": "Admin",
-      "discription": ""
-    },
-    {
-      "id": "77d9",
-      "taskname": "",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:09:06.528Z",
-      "owner": "Admin",
-      "discription": ""
-    },
-    {
-      "id": "4920",
-      "taskname": "",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:10:01.097Z",
-      "owner": "Admin",
-      "discription": ""
-    },
-    {
-      "id": "59ee",
-      "taskname": "",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:10:01.097Z",
-      "owner": "Admin",
-      "discription": ""
-    },
-    {
-      "id": "35e5",
-      "taskname": "x",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:10:01.097Z",
-      "owner": "Admin",
-      "discription": ""
-    },
-    {
-      "id": "45c7",
-      "taskname": "x",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:10:01.097Z",
-      "owner": "Admin",
-      "discription": ""
-    },
-    {
-      "id": "a503",
-      "taskname": "xx",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:10:01.097Z",
-      "owner": "Admin",
-      "discription": ""
-    },
-    {
-      "id": "0466",
-      "taskname": "xx",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:10:01.097Z",
-      "owner": "Admin",
-      "discription": ""
-    },
-    {
-      "id": "196d",
-      "taskname": "xxx",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:10:01.097Z",
-      "owner": "Admin",
-      "discription": ""
-    },
-    {
-      "id": "132b",
-      "taskname": "xxx",
-      "status": "",
-      "priority": "",
-      "createddate": "2025-09-05T14:30:00Z",
-      "enddate": "2025-09-05T17:10:01.097Z",
-      "owner": "Admin",
-      "discription": ""
-    },
+    
     {
       "id": "899f",
       "taskname": "My Fifth Task",
@@ -193,7 +94,7 @@
       "enddate": "2025-10-02T14:58:34.000Z",
       "owner": "Admin",
       "discription": "sample task",
-      "assignee": ""
+      "assignee": "manu"
     },
     {
       "id": "9d8a",
@@ -216,6 +117,17 @@
       "owner": "manu",
       "discription": "aaa vvvv",
       "assignee": "manu"
+    },
+    {
+      "id": "386e",
+      "taskname": "Ajins 1st task",
+      "status": "todo",
+      "priority": "high",
+      "createddate": "2025-09-08T18:01:33.539Z",
+      "enddate": "2025-11-29T18:01:33.000Z",
+      "owner": "ajin",
+      "discription": "1234567890",
+      "assignee": "ajin"
     }
   ]
 }

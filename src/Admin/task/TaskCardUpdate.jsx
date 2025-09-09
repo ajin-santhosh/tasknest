@@ -21,7 +21,7 @@ function TaskCardUpdate() {
   // Fetch task from server on mount
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/tasks/${id}`)
+      .get(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/tasks/${id}`)
       .then((res) => {
         const data = res.data;
         setForm({
@@ -51,7 +51,7 @@ function TaskCardUpdate() {
     e.preventDefault();
 
     axios
-      .patch(`http://localhost:5000/tasks/${id}`, {
+      .patch(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/tasks/${id}`, {
         ...form,
         enddate: form.enddate ? form.enddate.toISOString() : null,
       })

@@ -10,7 +10,7 @@ const [tasks, setTasks] = useState([])
 const [search, setsearch] = useState("")
 
     useEffect(()=>{
-        axios.get("http://localhost:5000/tasks")
+        axios.get("https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/tasks")
       .then((res) => {
         setTasks(res.data);   // ✅ res.data contains the array
       })
@@ -22,9 +22,9 @@ const [search, setsearch] = useState("")
        
   return (
    <>
-   <section>
+   <section className=''>
   {/* Admin panel top controls */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-5">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-5 ">
     {/* Search */}
     <div className="flex justify-center p-2">
       <input

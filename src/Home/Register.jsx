@@ -20,7 +20,7 @@ function Register() {
   function handleSubmit(e) {
       e.preventDefault();
       axios
-      .post("http://localhost:5000/users",register)
+      .post("https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/users",register)
       .then((res) => {
         console.log("user registered", res.data);
          navigate("/login"); // redirect after adding

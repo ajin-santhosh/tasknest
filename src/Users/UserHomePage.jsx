@@ -14,7 +14,7 @@ const [tasks, setTasks] = useState([])
 const [search, setsearch] = useState("")
   const [isOn, setIsOn] = useState(false);
     useEffect(()=>{
-        axios.get("http://localhost:5000/tasks")
+        axios.get("https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/tasks")
       .then((res) => {
         setTasks(res.data);   // ✅ res.data contains the array
       })

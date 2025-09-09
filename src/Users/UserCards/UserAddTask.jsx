@@ -48,7 +48,7 @@ function UserAddTask() {
     };
 
     axios
-      .post("http://localhost:5000/tasks", payload)
+      .post("https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/tasks", payload)
       .then((res) => {
         console.log("Task added:", res.data);
         navigate(`/user/${userid}/${name}`); // redirect after adding

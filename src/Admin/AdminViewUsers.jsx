@@ -12,14 +12,14 @@ function AdminViewUsers() {
 
     useEffect(() => {
     axios
-      .get(`http://localhost:5000/users?status=1`)
+      .get(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/users?status=1`)
       .then((res) => setUser(res.data))
       .catch((err) => console.error("Error fetching task:", err));
   }, []);
 
   
   function Deleteuser(id){
-          axios.delete(`http://localhost:5000/users/${id}`)
+          axios.delete(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/users/${id}`)
     .then(() => {
       console.log("user deleted!");
       alert("User deleted successfully!");
@@ -39,7 +39,7 @@ function AdminViewUsers() {
             <img src={arrow} alt="user" className="w-8 h-9 border-1 border-white-500 rounded-md w-10 m-2 hover:bg-gray-500 p-1" />
             </Link>
             <Link to={'/admin/verify_users'}>
-             <div className="flex  items-center border-1 border-white-500 rounded-md w-40 m-2 hover:bg-gray-500 gap-2 p-1 justify-self-end">
+             <div className="flex  items-center border-1 border-white-500 rounded-md w-35 m-2 hover:bg-gray-500 gap-2 p-1 justify-self-end">
                 <p>Verify Users</p>
                <img src={img2} alt="user" className="w-6 h-8" />
 

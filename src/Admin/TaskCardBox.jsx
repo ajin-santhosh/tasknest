@@ -20,12 +20,12 @@ function TaskCardBox() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/tasks/${id}`)
+      .get(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/tasks/${id}`)
       .then((res) => setTask(res.data))
       .catch((err) => console.error("Error fetching task:", err));
   }, [id]);
   function deleteTask (){
-    axios.delete(`http://localhost:5000/tasks/${id}`)
+    axios.delete(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/tasks/${id}`)
     .then(() => {
       console.log("Task deleted!");
       alert("Task deleted successfully!");
@@ -65,9 +65,9 @@ function TaskCardBox() {
          <span className="font-semibold">Description:</span> <br />{task.discription}
   </p>
          
-          <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+          {/* <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
             {task.description}
-          </p>
+          </p> */}
           <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm font-mono">
             Started date: {task.createddate}
           </p>

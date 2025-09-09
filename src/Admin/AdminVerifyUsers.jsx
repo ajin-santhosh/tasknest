@@ -11,7 +11,7 @@ function AdminVerifyUsers() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/users?status=0`)
+      .get(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/users?status=0`)
       .then((res) => setUser(res.data))
       .catch((err) => console.error("Error fetching task:", err));
   }, []);
@@ -30,7 +30,7 @@ function AdminVerifyUsers() {
     else {
       console.log("Updating user:", id, "with role:", updatedUser.usertype);
     axios
-      .patch(`http://localhost:5000/users/${id}`, {
+      .patch(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/users/${id}`, {
         usertype: updatedUser.usertype,
         status: 1,
       })
@@ -44,7 +44,7 @@ function AdminVerifyUsers() {
   }
   function Deleteuser(id) {
     axios
-      .delete(`http://localhost:5000/users/${id}`)
+      .delete(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/users/${id}`)
       .then(() => {
         console.log("user deleted!");
         alert("User deleted successfully!");
@@ -104,7 +104,7 @@ function AdminVerifyUsers() {
               User Type:
             </h5>
             <select
-              className="border p-2 rounded bg-gray-200 text-black w-20"
+              className="border p-2 rounded bg-gray-200 text-black w-30"
               value={use.usertype || ""}
               onChange={(e) => handleChange(use.id, e.target.value)}
               required

@@ -18,7 +18,7 @@ function Login() {
 
     try {
       // ✅ Check user credentials from JSON server
-      const res = await axios.get(`http://localhost:5000/users?username=${loginData.username}&password=${loginData.password}`)
+      const res = await axios.get(`https://68c048970b196b9ce1c3def3.mockapi.io/tasknest/users?username=${loginData.username}&password=${loginData.password}`)
       
       if (res.data.length > 0) {
         const user = res.data[0]
