@@ -102,7 +102,7 @@ if (!user) {
               </button>
             </Link>
 
-             { (user.name === task.owner || user.name === task.assignee) &&(
+             { (user.name === task.owner) &&(
 
                 <button
               class=" my-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-800"
