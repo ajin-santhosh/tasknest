@@ -11,7 +11,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Homepage from './Home/Homepage.jsx';
+import HomePage from `./Home/HomePage.jsx`;
 import AdminHeaderPage from './Admin/AdminHeaderPage.jsx';
 import AdminHome from './Admin/AdminHome.jsx';
 import TaskCardBox from './Admin/TaskCardBox.jsx';
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
   {
    element: <HeaderPage />,   // ✅ wraps children with Header + Footer
     children: [
-      { index: true, element: <Homepage /> },      // renders at "/"
+      { index: true, element: <HomePage /> },      // renders at "/"
       { path: "about", element: <AboutPage /> },
       { path: "contact", element: <ContactPage /> },
       {path: "login", element: <Login />},
