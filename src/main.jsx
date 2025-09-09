@@ -11,10 +11,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import HomePage from `./Home/HomePage.jsx`;
+import HomePage from './Home/HomePage.jsx';
 import AdminHeaderPage from './Admin/AdminHeaderPage.jsx';
 import AdminHome from './Admin/AdminHome.jsx';
-import TaskCardBox from './Admin/TaskCardBox.jsx';
+import TaskCardBox from './Admin/TaskCardBox.jsx'
 import TaskCardUpdate from './Admin/task/TaskCardUpdate.jsx';
 import AddTask from './Admin/task/AddTask.jsx';
 import AdminVerifyUsers from './Admin/AdminVerifyUsers.jsx';
