@@ -22,7 +22,7 @@ import AdminViewUsers from './Admin/AdminViewUsers.jsx';
 import UserHeaderPage from './Users/UserHeaderPage.jsx';
 import UserHomePage from './Users/UserHomePage.jsx';
 import UserNotVerifiedPage from './Users/UserNotVerifiedPage.jsx';
-import UsertaskCardBox from './Users/UserCards/UsertaskCardBox.jsx';
+import UserTaskCardBox from './Users/UserCards/UserTaskCardBox.jsx';
 import UserAddTask from './Users/UserCards/UserAddTask.jsx';
 import UserUpdateTask from './Users/UserCards/UserUpdateTask.jsx';
 
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
     element: <UserHeaderPage />,
     children:[
     {index: true, element : <UserHomePage />},
-    {path:"usertask/:id", element : <UsertaskCardBox />},
+    {path:"usertask/:id", element : <UserTaskCardBox />},
     {path:"user_addtask", element : <UserAddTask />},
     {path:"usertask/:id/user_update_task", element : <UserUpdateTask/>},
 
@@ -72,6 +72,7 @@ const router = createBrowserRouter([
 
   
 ]);
+// always remember to check speelling 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
