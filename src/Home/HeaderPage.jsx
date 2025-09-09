@@ -1,13 +1,13 @@
 import React from 'react'
 import logo from "../assets/logo.png"
-import HomePage from './Homepage'
+import HomePage from './HomePage'
 import { Outlet, Link } from "react-router-dom";
 
 function HeaderPage() {
   return (
    <>
  <div className="bg-black text-white">
-      {/* Navbar */}
+      {/* Navbar in home page*/}
       <header className="flex justify-between items-center p-2 bg-black shadow-lg">
         <div className="flex items-center space-x-3">
           <img src={logo} alt="TaskNest Logo" className="w-20 h-20" />
@@ -40,7 +40,7 @@ function HeaderPage() {
               Terms
             </a>
             <a href="#" className="hover:text-gray-300">
-              Contact
+              Contact us 
             </a>
           </div>
         </div>
